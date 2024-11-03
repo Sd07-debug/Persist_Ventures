@@ -11,3 +11,9 @@ This project creates an AI-powered avatar that interacts with users through a we
    ```bash
    pip install -r requirements.txt
    
+3. Run The Flask application:
+   ```bash
+   python app.py
+
+4. Open a web browser at http://127.0.0.1:5000/
+   
