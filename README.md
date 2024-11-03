@@ -1,9 +1,14 @@
 # Persist_Ventures
 
-# AI Avatar Platform
+AI Avatar Platform
 
 ## Project Overview
-This project creates an AI-powered avatar that interacts with users through a web interface. Users can ask questions and receive answers based on AI-generated content.
+This project is designed to create an AI-powered avatar that interacts with users via a web interface. The avatar can answer questions and provide information based on user input, leveraging the OpenAI API for natural language processing.
+
+## Technologies Used
+- **Flask**: A lightweight web framework for Python.
+- **OpenAI API**: For AI-driven responses.
+- **HTML/CSS**: For frontend development.
 
 ## Setup Instructions
 1. Clone the repository.
@@ -16,4 +21,10 @@ This project creates an AI-powered avatar that interacts with users through a we
    python app.py
 
 4. Open a web browser at http://127.0.0.1:5000/
+
+5. Author :
+ Name : Sahil Dhepale
+ Email id: sahildhepale123@gmail.com
+
+
    
