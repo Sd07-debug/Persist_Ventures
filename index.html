@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Avatar</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat { margin: 20px; }
+        .user { color: blue; }
+        .ai { color: green; }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <input type="text" id="message" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        async function sendMessage() {
+            const messageInput = document.getElementById('message');
+            const userMessage = messageInput.value;
+            document.getElementById('chat').innerHTML += `<div class="user">User: ${userMessage}</div>`;
+            messageInput.value = '';
+
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: userMessage })
+            });
+
+            const data = await response.json();
+            document.getElementById('chat').innerHTML += `<div class="ai">AI: ${data.response}</div>`;
+        }
+    </script>
+</body>
+</html>
